@@ -33,13 +33,16 @@
                 </div>
 
                 <div class="row">
+                    {% if data.country_code %}
                     <div>
-                        <h3 class="ms-4">country code: {{country_code}}</h3>
-                            <h5 class="ms-4">coordinates : {{coordinate}}</h5>
-                            <h5 class="ms-4">temp: {{temp}}</h5>
-                            <h5 class="ms-4">pressure: {{pressure}}</h5>
-                            <h5 class="ms-4">humidity:{{humidity}} </h5>
+                        <h1 class="ms-4">{{city}}</h1>
+                        <h3 class="ms-4">country code: {{data.country_code}}</h3>
+                            <h5 class="ms-4">coordinates : {{data.coordinate}}</h5>
+                            <h5 class="ms-4">temp: {{data.temp}}</h5>
+                            <h5 class="ms-4">pressure: {{data.pressure}}</h5>
+                            <h5 class="ms-4">humidity:{{data.humidity}} </h5>
                     </div>
+                    {% endif %}
                 </div>
             </div>
         </form>
